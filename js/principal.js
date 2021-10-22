@@ -28,6 +28,4 @@ function readForm() {
 
     const usuarioListo = new Usuario(usuario);
     usuarioListo.registrar();
-
-
 }

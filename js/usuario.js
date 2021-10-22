@@ -18,9 +18,9 @@ class Usuario {
             mode: 'no-cors', // no-cors, *cors, same-origin
         };
         const response = await fetch('http://localhost:3000/api/v1/registrar', params);
+
         if (response) {
-            console.log('exito')
-                // location.href = "";
+            location.href = "http://localhost:5500/login.html";
         } else {
             alert('error registrando usuario')
         }
@@ -35,8 +35,6 @@ class Usuario {
         if (pass !== this.password) {
             return 'La contraseña es incorrecta';
         }
-
-
     }
 }
 
