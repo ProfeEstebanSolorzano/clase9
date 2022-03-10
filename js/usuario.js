@@ -36,6 +36,19 @@ class Usuario {
             return 'La contraseña es incorrecta';
         }
     }
+
+
+    async getInfo() {
+        const params = {
+            method: 'get',
+            body: JSON.stringify(this.info),
+            mode: 'no-cors', // no-cors, *cors, same-origin
+        };
+        const response = await fetch('http://localhost:3000/api/v1/getInfo', params);
+        const usuariosRaw = await response.json();
+        const usuarios = usuariosRaw.info
+
+    }
 }
 
 export { Usuario }
